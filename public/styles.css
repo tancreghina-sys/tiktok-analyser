@@ -1,13 +1,13 @@
 :root {
-  --bg: #f3efe4;
-  --panel: #fffaf2;
-  --ink: #1e1d1a;
-  --muted: #6a655c;
-  --accent: #045f4f;
-  --accent-2: #d75a2a;
-  --line: #d5cec0;
+  --bg: #eaf4ff;
+  --panel: #f7fcff;
+  --ink: #10222f;
+  --muted: #466273;
+  --accent: #0f5ed8;
+  --accent-2: #14a37f;
+  --line: #bfd6e5;
   --radius: 18px;
-  --shadow: 0 14px 40px rgba(40, 31, 10, 0.1);
+  --shadow: 0 14px 40px rgba(12, 46, 84, 0.12);
 }
 
 * {
@@ -20,8 +20,8 @@ body {
   font-family: 'Space Grotesk', 'Segoe UI', sans-serif;
   color: var(--ink);
   background:
-    radial-gradient(circle at 10% 0%, #f9d7a1 0%, transparent 32%),
-    radial-gradient(circle at 100% 80%, #b9e3d8 0%, transparent 36%),
+    radial-gradient(circle at 10% 0%, #9ec8ff 0%, transparent 32%),
+    radial-gradient(circle at 100% 80%, #92ead0 0%, transparent 36%),
     var(--bg);
 }
 
@@ -160,7 +160,7 @@ button:hover {
 }
 
 button.primary {
-  background: linear-gradient(120deg, var(--accent), #0b886f);
+  background: linear-gradient(120deg, var(--accent), var(--accent-2));
   color: #fff;
   border: 0;
   font-weight: 700;
@@ -182,7 +182,7 @@ table {
 
 th,
 td {
-  border-bottom: 1px solid #ece4d3;
+  border-bottom: 1px solid #d6e7f2;
   text-align: left;
   vertical-align: top;
   padding: 0.5rem;
@@ -190,7 +190,7 @@ td {
 }
 
 th {
-  background: #f8f2e6;
+  background: #eaf5ff;
 }
 
 td input {
@@ -207,8 +207,8 @@ td input {
 }
 
 .card {
-  background: linear-gradient(130deg, #fff, #f9f4eb);
-  border: 1px solid #e3dbc9;
+  background: linear-gradient(130deg, #ffffff, #edf8ff);
+  border: 1px solid #cee2f0;
   border-radius: 12px;
   padding: 0.75rem;
 }
@@ -220,10 +220,10 @@ td input {
 }
 
 .signal-list {
-  border: 1px solid #e6dece;
+  border: 1px solid #cee2f0;
   border-radius: 12px;
   padding: 0.75rem;
-  background: #fffdf7;
+  background: #f8fdff;
 }
 
 .signal-list ul {
