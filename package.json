@@ -1,0 +1,14 @@
+{
+  "name": "viral-trend-planner",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Web app for analyzing viral social videos and generating content plans",
+  "type": "module",
+  "scripts": {
+    "start": "node server.mjs",
+    "dev": "node --watch server.mjs"
+  },
+  "engines": {
+    "node": ">=18"
+  }
+}

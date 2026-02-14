@@ -1,0 +1,137 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Viral Trend Planner</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <main class="app-shell">
+      <section class="hero">
+        <p class="eyebrow">Content Intelligence Studio</p>
+        <h1>Analyze viral social videos and ship a winning plan this week.</h1>
+        <p>
+          Add your niche and a few high-performing reference videos. The planner scores trend patterns and builds a
+          practical publishing schedule with hooks, formats, and CTAs.
+        </p>
+      </section>
+
+      <section class="panel">
+        <h2>Campaign Setup</h2>
+        <form id="analyzer-form">
+          <div class="grid two">
+            <label>
+              Niche
+              <input name="niche" placeholder="e.g. Fitness for busy professionals" required />
+            </label>
+            <label>
+              Audience
+              <input name="audience" placeholder="e.g. 22-34 founders, US" required />
+            </label>
+          </div>
+
+          <div class="grid three">
+            <label>
+              Goal
+              <select name="goal">
+                <option value="reach">Reach</option>
+                <option value="followers">Follower Growth</option>
+                <option value="leads">Leads</option>
+                <option value="sales">Sales</option>
+              </select>
+            </label>
+            <label>
+              Posting Days / Week
+              <input type="number" min="1" max="7" name="postingDaysPerWeek" value="4" required />
+            </label>
+            <label>
+              Daily Time Budget (hours)
+              <input type="number" min="1" max="12" name="dailyTimeBudgetHours" value="2" required />
+            </label>
+          </div>
+
+          <fieldset>
+            <legend>Platforms</legend>
+            <div class="platforms">
+              <label><input type="checkbox" name="platforms" value="tiktok" checked />TikTok</label>
+              <label><input type="checkbox" name="platforms" value="instagram" checked />Instagram Reels</label>
+              <label><input type="checkbox" name="platforms" value="youtube" />YouTube Shorts</label>
+              <label><input type="checkbox" name="platforms" value="x" />X</label>
+            </div>
+          </fieldset>
+
+          <div class="actions">
+            <button type="button" id="add-row">Add Reference Video</button>
+            <button type="button" id="sample-data">Load Sample Data</button>
+          </div>
+
+          <div class="table-wrap">
+            <table id="reference-table">
+              <thead>
+                <tr>
+                  <th>Topic</th>
+                  <th>Hook Type</th>
+                  <th>Format</th>
+                  <th>Duration</th>
+                  <th>Views</th>
+                  <th>Likes</th>
+                  <th>Comments</th>
+                  <th>Shares</th>
+                  <th>Watch %</th>
+                  <th>Hashtags</th>
+                </tr>
+              </thead>
+              <tbody id="reference-body"></tbody>
+            </table>
+          </div>
+
+          <button class="primary" type="submit">Analyze Trends & Build Plan</button>
+        </form>
+      </section>
+
+      <section class="panel hidden" id="results-panel">
+        <h2>Trend Strategy</h2>
+        <div id="summary-cards" class="cards"></div>
+
+        <h3>Top Signals</h3>
+        <div class="grid three" id="signals"></div>
+
+        <h3>7-Day Content Plan</h3>
+        <div class="table-wrap">
+          <table>
+            <thead>
+              <tr>
+                <th>Date</th>
+                <th>Slot</th>
+                <th>Pillar</th>
+                <th>Concept</th>
+                <th>Hook</th>
+                <th>Format</th>
+                <th>CTA</th>
+              </tr>
+            </thead>
+            <tbody id="plan-body"></tbody>
+          </table>
+        </div>
+      </section>
+    </main>
+
+    <template id="row-template">
+      <tr>
+        <td><input name="topic" placeholder="topic" /></td>
+        <td><input name="hookType" placeholder="hook" /></td>
+        <td><input name="format" placeholder="format" /></td>
+        <td><input name="durationSec" type="number" min="1" placeholder="30" /></td>
+        <td><input name="views" type="number" min="0" placeholder="120000" /></td>
+        <td><input name="likes" type="number" min="0" placeholder="6400" /></td>
+        <td><input name="comments" type="number" min="0" placeholder="420" /></td>
+        <td><input name="shares" type="number" min="0" placeholder="2100" /></td>
+        <td><input name="watchTimePct" type="number" min="0" max="100" placeholder="68" /></td>
+        <td><input name="hashtags" placeholder="#creator,#trend" /></td>
+      </tr>
+    </template>
+
+    <script src="app.js" type="module"></script>
+  </body>
+</html>
